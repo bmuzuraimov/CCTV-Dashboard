@@ -11,13 +11,13 @@ CCTV-Dashboard is a dashboard designed to view your surveillance station. This r
 Here's a sneak peek of the dashboard:
 
 ### Dashboard
-![Dashboard Preview](./dashboard.png)
+![Dashboard Preview](./Dashboard.png)
 
 ### Camera
-![Camera Preview](./camera.png)
+![Camera Preview](./Camera.png)
 
 ### History
-![History Preview](./history.png)
+![History Preview](./History.png)
 
 ## Getting Started
 
