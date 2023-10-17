@@ -1,39 +1,55 @@
-Project Name
-A brief description of your project.
+# CCTV-Dashboard
 
-Table of Contents
-Project Name
-Table of Contents
-Description
-Technologies
-Installation and Usage
-Features
-Screenshots
-Contributing
-License
-Description
-Provide a more detailed description of your project, including its purpose, features, and any other relevant information.
+CCTV-Dashboard is a dashboard designed to view your surveillance station. This repository provides the frontend in a responsive format. It contains four main pages:
 
-This project includes four pages:
+1. Login
+2. Dashboard
+3. Camera
+4. History
 
-Dashboard
-History
-Camera
-Login
-Technologies
-List the technologies you used to build your project, including programming languages, frameworks, libraries, and any other tools.
+## Preview
+Here's a sneak peek of the dashboard:
 
-Installation and Usage
-Provide instructions for installing and running your project, including any dependencies that need to be installed.
+### Dashboard
+![Dashboard Preview](./dashboard.png)
 
-Features
-List the main features of your project, including any functionality that sets it apart from other similar projects.
+### Camera
+![Camera Preview](./camera.png)
 
-Screenshots
-If applicable, include screenshots of your project in action to give users a visual representation of what they can expect.
+### History
+![History Preview](./history.png)
 
-Contributing
-Include instructions for users who would like to contribute to your project, including how to report issues, how to make changes, and any other relevant information.
+## Getting Started
 
-License
-Include information about the license for your project, including any restrictions on its use and distribution.
+Follow these steps to get the dashboard up and running:
+
+1. **Clone the project**
+   
+   ```bash
+   git clone git@github.com:bmuzuraimov/CCTV-Dashboard.git
+   ```
+
+2. **Navigate to the project directory**
+
+   ```bash
+   cd ./CCTV-Dashboard
+   ```
+
+3. **Install the necessary packages**
+
+   ```bash
+   npm i
+   ```
+
+4. **Run the server**
+
+   ```bash
+   npm start
+   ```
+
+   Once the server is running, you can access the dashboard on your browser at `http://localhost:3000`.
+
+## Contribution
+
+If you'd like to contribute to this project, please follow the conventional method of forking the repository, creating a new branch for your feature/fix, and then submitting a pull request.
+
