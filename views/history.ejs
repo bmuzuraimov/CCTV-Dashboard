@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/images/icons/main-ico.ico">
+		<link rel="stylesheet" href="/stylesheets/style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<title>History</title>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="menu">
+				<a href="#navbar" class="menu__logo"><img src="/images/icons/ai-academy.svg" alt="logo"></a>
+				<ul>
+					<li class="menu-ico">
+						<a href="/"><i class="fa fa-home"></i></a>
+					</li>
+					<li class="menu-ico">
+						<a href="/camera"><i class="fas fa-camera" ></i> 1</a>
+					</li>
+					<li class="menu-ico">
+						<a href="/camera"><i class="fas fa-camera" ></i> 2</a>
+					</li>
+					<li class="menu-ico">
+						<a href="/camera"><i class="fas fa-camera"  ></i> 3</a>
+					</li>
+					<li class="menu-ico">
+						<a href="/camera"><i class="fas fa-camera" ></i> 4</a>
+					</li>
+					<li class="menu-ico">
+						<a href="/history"><i class="fas fa-history  ico-active	" ></i></a>
+					</li>
+				</ul>
+			</nav>
+			<article class="history-container">
+				<header class="page__header">
+					<h2>History</h2>
+				</header>
+				<section class="filter-wrapper">
+					<h2>Query Snapshots</h2>
+					<hr>
+					<form action="#query-history-results" method="post" class="filter-form">
+						<div class="filter-date">
+							<label for="start-date">Start timestamp</label>
+							<input name="start-time" type="datetime-local">
+						</div>
+						<div class="filter-date">
+							<label for="start-date">End timestamp</label>
+							<input name="end-time" type="datetime-local">
+						</div>
+						<div class="filter-camera">
+							<h4>Cameras</h4>
+							<div>
+								<label for="all">All</label>
+								<input type="checkbox" name="camera[]" class="filter-cam" id="all" value="cam-all">
+							</div>
+							<div>
+								<label for="cam1">1</label>
+								<input type="checkbox" name="camera[]" class="filter-cam" id="cam1" value="cam-1">
+							</div>
+							<div>
+								<label for="cam2">2</label>
+								<input type="checkbox" name="camera[]" class="filter-cam" id="cam2" value="cam-2">
+							</div>
+							<div>
+								<label for="cam3">3</label>
+								<input type="checkbox" name="camera[]" class="filter-cam" id="cam3" value="cam-3">
+							</div>
+							<div>
+								<label for="cam4">4</label>
+								<input type="checkbox" name="camera[]" class="filter-cam" id="cam4" value="cam-4">
+							</div>
+						</div>
+						<div class="filter-period">
+							<h4>Time Period</h4>
+							<div>
+								<input name="period" type="radio" id="sec30">
+								<label for="sec30">30 seconds</label>
+							</div>
+							<div>
+								<input name="period" type="radio" id="min1">
+								<label for="min1">1 minute</label>
+							</div>
+							<div>
+								<input name="period" type="radio" id="min5">
+								<label for="min5">5 minutes</label>
+							</div>
+							<div>
+								<input name="period" type="radio" id="min15">
+								<label for="min15">15 minutes</label>
+							</div>
+							<div>
+								<input name="period" type="radio" id="min30">
+								<label for="min30">30 minutes</label>
+							</div>
+							<div>
+								<input name="period" type="radio" id="hour1">
+								<label for="hour1">1 hour</label>
+							</div>
+						</div>
+						<div>
+							<button type="submit" class="show-result" id="show-result">Show results</button>
+						</div>		
+					</form>
+				</section>
+				<section class="results-wrapper">
+					<h2>Results</h2>
+					<hr>
+					<div class="results">
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10234342</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10234342</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10234342</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10234342</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10234342</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10234342</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10234342</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10234342</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10234342</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10234342</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10234342</p>
+								</div>
+							</div>
+					</div>
+					<div class="pagination-wrapper">
+						<ul class="pagin-btns">
+							<li class="page-info">1-10 of 100 items</li>
+							<li><button class="pagin-btn" type="button" value="prev">&lt;</button></li>
+							<li><button class="pagin-btn" type="button" value="1">1</button></li>
+							<li><button class="pagin-btn" type="button" value="2">2</button></li>
+							<li><button class="pagin-btn pagin-btn-active" type="3" value="prev">3</button></li>
+							<li><button class="pagin-btn" type="button" value="4">4</button></li>
+							<li><button class="pagin-btn" type="button" value="5">5</button></li>
+							<li><button class="pagin-btn" type="button" value="6">6</button></li>
+							<li>&hellip;</li>
+							<li><button class="pagin-btn" type="button" value="50">50</button></li>
+							<li><button class="pagin-btn" type="button" value="next-page">&gt;</button></li>
+						</ul>
+						<select name="no_results" id="pagin-select">
+							<option value="12" selected>12</option>
+							<option value="24">24</option>
+							<option value="36">36</option>
+						</select>
+					</div>
+				</section>
+			</article>
+		</div>
+		<!--Modal-bg-->
+		<div class="modal-bg">
+			<div class="modal">
+				<!--modal-history-zoom-->
+				<div class="modal-history">
+					<span class="modal-close"><i class="fas fa-times"></i></span>
+					<h6 class="page-title">Snapshots</h6>
+					<hr>
+					<i class="fas fa-chevron-left camera-prev"></i>
+					<i class="fas fa-chevron-right camera-next"></i>
+					<div class="modal-image">
+						<img src="#">
+					</div>
+					<div class="screenshot-info">
+						<p>Count 124567</p>
+						<p>January 28, 2021 10:17:30 AM</p>						
+					</div>
+				</div>
+			</div>
+		<!--//Modal-bg-->
+		</div>
+		<script type="text/javascript" src="/javascripts/jquery.js"></script>
+		<script type="text/javascript" src="/javascripts/morris.min.js"></script>
+		<script type="text/javascript" src="/javascripts/script.js"></script>
+	</body>
+</html>

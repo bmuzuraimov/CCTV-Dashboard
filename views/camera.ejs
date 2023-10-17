@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/images/icons/main-ico.ico">
+		<link rel="stylesheet" href="/stylesheets/style.css">
+		<link rel="stylesheet" href="/stylesheets/morris.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<script src="/javascripts/sweetalert2.min.js"></script>
+		<title>Camera 1</title>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="menu">
+				<a href="#navbar" class="menu__logo"><img src="/images/icons/ai-academy.svg" alt="logo"></a>
+				<ul>
+					<li class="menu-ico">
+						<a href="/"><i class="fa fa-home"></i></a>
+					</li>
+					<li class="menu-ico">
+						<a href="/camera"><i class="fas fa-camera ico-active" ></i> 1</a>
+					</li>
+					<li class="menu-ico">
+						<a href="/camera"><i class="fas fa-camera" ></i> 2</a>
+					</li>
+					<li class="menu-ico">
+						<a href="/camera"><i class="fas fa-camera"  ></i> 3</a>
+					</li>
+					<li class="menu-ico">
+						<a href="/camera"><i class="fas fa-camera" ></i> 4</a>
+					</li>
+					<li class="menu-ico">
+						<a href="/history"><i class="fas fa-history" ></i></a>
+					</li>
+				</ul>
+			</nav>
+			<article class="camera-container">
+				<header class="page__header">
+					<h2 class="camera-name">Camera 1</h2>
+					<ul class="header__perfomance">
+						<li>GPU: <span class="green">50&#176;</span> 1633Mhz</li>&emsp;
+						<li>CPU: <span class="orange">68&#176;</span> 4933Mhz</li>
+					</ul>
+				</header>
+				<section class="camera-wrapper">
+					<div class="panel__bar">
+						<h6>Count</h6>
+						<hr>
+						<table class="panel-table">
+							<tr>
+								<td class="table__col1">With occlusion</td>
+								<td class="table__col2" id="debug1">2610</td>
+							</tr>
+							<tr>
+								<td class="table__col1">Tolerated Threshold</td>
+								<td class="table__col2"><button id="threshold-btn">Change</button>0.5</td>
+							</tr>
+							<tr>
+								<td class="table__col1">Total detection</td>
+								<td class="table__col2" id="debug2">2530</td>
+							</tr>
+							<tr>
+								<td class="table__col1">Detection inside</td>
+								<td class="table__col2">810</td>
+							</tr>
+							<tr>
+								<td class="table__col1">Detection outside</td>
+								<td class="table__col2">1733</td>
+							</tr>
+						</table>
+						<hr>
+						<button class="panel__btn" id="draw-btn">Set Region of Interest</button>
+						<table class="panel-table">
+							<tr>
+								<td class="table__col1">Live count</td>
+								<td class="table__col2"><img src="/images/icons/info.svg" class="ico-info" width="32" alt="logo"></td>
+							</tr>
+						</table>
+						<h2>4600</h2>
+						<div id="graph"></div>
+						<div class="graph-info">
+							<p>Hourly Average 3500</p>
+							<p class="change-up">Hourly Change 12%</p>
+							<!-- change-up & change-down -->
+						</div>
+					</div>
+					<div class="video-container">
+						<h6 class="video-title">Live</h6>
+						<hr>
+						<div class="video_face-mask">
+							<label for="face-mask">Face mask</label>
+							<img src="images/icons/info.svg" class="ico-info" width="32" alt="logo">
+							<input type="checkbox" id="face-mask" class="check-box">
+						</div>
+						<div class="drawing-wrapper">
+							<video controls autoplay="true" src="/images/crowded-people.mp4" id="streaming-video"></video>
+							<svg class="drawing-area hidden" width="100%" height="100%"></svg>
+							<div class="face-mask-rect hidden"></div>						
+						</div>
+					</div>
+				</section>
+				<section class="history-wrapper">
+					<div class="history-title">
+						<div><h4>History</h4></div>
+						<div class="history-title-right"><p>Automatic snapshot every 30 seconds</p></div>
+					</div>
+					<hr>
+					<div class="screenshots">
+						<i class="fas fa-chevron-left slider-prev"></i>
+						<i class="fas fa-chevron-right slider-next"></i>
+						<div class="screenshot-wrapper">
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img1.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">10</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img2.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">20</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img3.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p>30</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p class="count">10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img4.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">40</p>
+								</div>
+							</div>
+							<div class="screenshot">
+								<div class="date">
+									<p>January 28, 2021</p>
+									<p>10:17:30 AM</p>
+								</div>
+								<div class="screenshot-card">
+									<img src="/images/modal-img5.png" class="screenshot-image">
+									<div class="screenshot-back">
+										<div class="back-info">
+											<p>With occlusion</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Threshold</p>
+											<p>0.6</p>
+										</div>
+										<div class="back-info">
+											<p>Total detection</p>
+											<p>2610</p>
+										</div>
+										<div class="back-info">
+											<p>Detection inside</p>
+											<p>810</p>
+										</div>	
+										<p class="back-btn">Click to zoom in</p>
+									</div>
+								</div>
+								<div class="screenshot-info">
+									<p>Count</p>
+									<p class="count">50</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</article>
+		</div>
+		<!--Modal-bg-->
+		<div class="modal-bg">
+			<div class="modal">
+				<!--modal-change-threshold-->
+				<div class="modal-threshold">
+					<span class="modal-close"><i class="fas fa-times"></i></span>
+					<h4 class="page-title">Change Threshold</h4>
+					<hr>
+					<form action="change_threshold" method="post" id="threshold-form">
+						<div class="input-box">
+							<label for="B06F0F6C">Threshold:</label>
+							<input type="number" class="text-input" name="threshold" id="B06F0F6C" value="0.5">
+						</div>
+						<hr>
+						<div class="button-box">
+							<button type="submit" class="confirm-btn" id="threshold-confirm">Confirm</button>
+							<button type="submit" class="cancel-btn modal-close" id="threshold-cancel">Cancel</button>
+						</div>
+					</form>
+				</div>
+				<!--modal-history-zoom-->
+				<div class="modal-history">
+					<span class="modal-close"><i class="fas fa-times"></i></span>
+					<h6 class="page-title">Snapshots</h6>
+					<hr>
+					<i class="fas fa-chevron-left camera-prev"></i>
+					<i class="fas fa-chevron-right camera-next"></i>
+					<div class="modal-image">
+						<img src="#">
+					</div>
+					<div class="screenshot-info">
+						<p class="modal-count">Count 124567</p>
+						<p>January 28, 2021 10:17:30 AM</p>						
+					</div>
+				</div>
+			</div>
+		<!--//Modal-bg-->
+		</div>
+		<script type="text/javascript" src="/javascripts/jquery.js"></script>
+		<script type="text/javascript" src="/javascripts/morris.min.js"></script>
+		<script type="text/javascript" src="/javascripts/raphael-min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script type="text/javascript" src="/javascripts/script.js"></script>
+	</body>
+</html>
